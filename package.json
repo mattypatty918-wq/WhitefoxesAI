@@ -1,16 +1,25 @@
 {
   "name": "whitefoxesai",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build:android": "eas build --platform android --profile preview",
+    "build:ios": "eas build --platform ios --profile preview",
+    "build:all": "eas build --platform all --profile preview",
+    "dev": "expo start --dev-client"
   },
   "dependencies": {
     "expo": "~54.0.33",
+    "expo-dev-client": "~6.0.21",
     "expo-status-bar": "~3.0.9",
+    "expo-router": "~5.0.14",
+    "expo-constants": "~18.0.6",
+    "expo-linking": "~8.0.10",
+    "expo-build-properties": "~0.14.6",
     "react": "19.1.0",
     "react-native": "0.81.5"
   },
